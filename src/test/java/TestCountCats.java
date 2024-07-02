@@ -1,16 +1,18 @@
 import com.example.Feline;
 import com.example.Lion;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Spy;
+import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
+
+import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
 
 public class TestCountCats {
 
-    @Spy
+    @Mock
 
     Feline feline;
 
@@ -18,8 +20,10 @@ public class TestCountCats {
 
     public void countKittensAmountIsRight(){
         Lion lion = new Lion(feline);
-        lion.countKittens();
-        Assert.assertEquals(1,lion.countKittens());
+        int expectedResult = 1;
+        Mockito.when(feline.getKittens()).thenReturn(1);
+        int actualResult = lion.countKittens();
+        assertEquals(expectedResult,actualResult);
     }
 
 }
