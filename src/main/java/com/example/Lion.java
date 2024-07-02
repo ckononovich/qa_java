@@ -14,13 +14,14 @@ public class Lion {
         } else {
             throw new Exception("Используйте допустимые значения пола животного - самец или самка");
         }
+
     }
 
-    private Feline feline;
+    Feline feline;
 
-    public Lion (Feline feline) {
-        this.feline= feline;
-    }
+   public Lion (Feline feline) {
+       this.feline= feline;
+   }
     public int countKittens() {
         return feline.getKittens();
     }
@@ -32,7 +33,7 @@ public class Lion {
 
     public List <String> getFood () throws Exception {
 
-        return feline.eatMeat();
+        return feline.getFood("Хищник");
     }
 
 }

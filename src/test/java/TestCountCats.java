@@ -19,7 +19,6 @@ public class TestCountCats {
     public void countKittensAmountIsRight(){
         Lion lion = new Lion(feline);
         lion.countKittens();
-
         Assert.assertEquals(1,lion.countKittens());
     }
 
