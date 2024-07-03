@@ -21,7 +21,7 @@ public class LionGetFoodTest {
 
     public void getFoodTest() throws Exception {
 
-        Lion lion = new Lion(feline);
+        Lion lion = new Lion("Самка",feline);
         List<String> values = List.of("Животные", "Птицы", "Рыба");
         Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List <String> actualResult = lion.getFood();

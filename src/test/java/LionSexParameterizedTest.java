@@ -1,9 +1,9 @@
+import com.example.Feline;
 import com.example.Lion;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.mockito.MockitoAnnotations;
 
 @RunWith(Parameterized.class)
 
@@ -26,7 +26,8 @@ import org.mockito.MockitoAnnotations;
     @Test
 
     public void correctSexIsDisplayed() throws Exception {
-        Lion lion = new Lion(lionSex);
+        Feline feline = new Feline();
+        Lion lion = new Lion(lionSex, feline);
         boolean actualResult = lion.doesHaveMane();
         Assert.assertEquals(lion.doesHaveMane(), actualResult);
     }

@@ -1,3 +1,4 @@
+import com.example.Feline;
 import com.example.Lion;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,7 +25,8 @@ public class TestException {
     @Test(expected = Exception.class)
     public void whenExceptionThrown_thenItIsTrue() throws Exception {
 
-        Lion lion = new Lion(lionException);
+        Feline feline = new Feline();
+        Lion lion = new Lion(lionException, feline);
         lion.doesHaveMane();
     }
 }

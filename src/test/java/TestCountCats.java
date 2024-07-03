@@ -18,8 +18,8 @@ public class TestCountCats {
 
     @Test
 
-    public void countKittensAmountIsRight(){
-        Lion lion = new Lion(feline);
+    public void countKittensAmountIsRight() throws Exception {
+        Lion lion = new Lion("Самец",feline);
         int expectedResult = 1;
         Mockito.when(feline.getKittens()).thenReturn(1);
         int actualResult = lion.countKittens();
