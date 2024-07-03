@@ -14,4 +14,14 @@ public class FelineGetKittensTest {
 
         assertEquals(expectedResult, actualResult);
     }
+
+    @Test
+    public void getKittensTest(){
+        Feline feline = new Feline();
+
+        int expectedResult = 1;
+        int actualResult = feline.getKittens();
+        assertEquals(expectedResult, actualResult);
+    }
+
 }

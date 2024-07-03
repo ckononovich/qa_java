@@ -22,7 +22,7 @@ public class TestCountCats {
         Lion lion = new Lion("Самец",feline);
         int expectedResult = 1;
         Mockito.when(feline.getKittens()).thenReturn(1);
-        int actualResult = lion.countKittens();
+        int actualResult = lion.getKittens();
         assertEquals(expectedResult,actualResult);
     }
 

@@ -19,7 +19,7 @@ public class Lion {
         this.feline= feline;
     }
 
-    public int countKittens() {
+    public int getKittens() {
         return feline.getKittens();
     }
 
